@@ -12,7 +12,7 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         return $this->render('home/index_vi.html.twig', [
-            'controller_name' => 'HomeController',
+            
         ]);
     }
 
@@ -20,7 +20,24 @@ class HomeController extends AbstractController
     public function inscrire(): Response
     {
         return $this->render('home/inscription.html.twig', [
-            'controller_name' => 'HomeController',
+            
+        ]);
+    }
+
+
+    #[Route('/inscription/candidat', name: 'app_inscription_candidat')]
+    public function inscrireCandidat(): Response
+    {
+        return $this->render('home/candidat.html.twig', [
+          
+        ]);
+    }
+
+    #[Route('/inscription/employeur', name: 'app_inscription_employeur')]
+    public function inscrireEmployeur(): Response
+    {
+        return $this->render('home/employeur.html.twig', [
+           
         ]);
     }
 
@@ -28,7 +45,7 @@ class HomeController extends AbstractController
     public function publier(): Response
     {
         return $this->render('home/publier.html.twig', [
-            'controller_name' => 'HomeController',
+            
         ]);
     }
 
@@ -36,7 +53,7 @@ class HomeController extends AbstractController
     public function postuler(): Response
     {
         return $this->render('home/candidature.html.twig', [
-            'controller_name' => 'HomeController',
+            
         ]);
     }
 
@@ -44,7 +61,7 @@ class HomeController extends AbstractController
     public function entretien(): Response
     {
         return $this->render('home/entretien.html.twig', [
-            'controller_name' => 'HomeController',
+            
         ]);
     }
 }
